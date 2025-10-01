@@ -1,0 +1,262 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+    "logo": {
+        "type": "chafa",
+        "source": "/home/jankozlowski/.config/fastfetch/image4.jpg",
+        "width": 65,
+        "height": 25,
+        // "type": "file",
+        // "source": "/home/jankozlowski/.config/fastfetch/ascii2.txt",
+        "color": {
+            "1": "magenta",
+            "2": "magenta",
+            "3": "magenta",
+            "4": "magenta",
+            "5": "magenta",
+            "6": "magenta",
+            "7": "magenta",
+            "8": "magenta",
+            "9": "magenta"
+        },
+        "padding": {
+            "top": 0,
+            "left": 0,
+            "right": 2
+        },
+        "printRemaining": true,
+        "preserveAspectRatio": false,
+        "recache": false,
+        "position": "left",
+        "chafa": {
+            "fgOnly": true,
+            "canvasMode": "TRUECOLOR",
+            "ditherMode": "DIFFUSION",
+            "colorSpace": "RGB",
+            "symbols": "braille"
+        }
+    },
+    "display": {
+        "stat": false,
+        "pipe": false,
+        "showErrors": false,
+        "disableLinewrap": true,
+        "hideCursor": false,
+        "separator": "   ",
+        "color": {
+            "keys": "blue",
+            "title": "",
+            "output": "",
+            "separator": "cyan"
+        },
+        "brightColor": true,
+        "duration": {
+            "abbreviation": false,
+            "spaceBeforeUnit": "default"
+        },
+        "size": {
+            "maxPrefix": "YB",
+            "binaryPrefix": "iec",
+            "ndigits": 2,
+            "spaceBeforeUnit": "default"
+        },
+        "temp": {
+            "unit": "D",
+            "ndigits": 1,
+            "color": {
+                "green": "32",
+                "yellow": "93",
+                "red": "91"
+            },
+            "spaceBeforeUnit": "default"
+        },
+        "percent": {
+            "type": [
+                "num",
+                "num-color"
+            ],
+            "ndigits": 0,
+            "color": {
+                "green": "32",
+                "yellow": "93",
+                "red": "91"
+            },
+            "spaceBeforeUnit": "default",
+            "width": 0
+        },
+        "bar": {
+            "char": {
+                "elapsed": "■",
+                "total": "-"
+            },
+            "border": {
+                "left": "[ ",
+                "right": " ]",
+                "leftElapsed": "",
+                "rightElapsed": ""
+            },
+            "color": {
+                "elapsed": "auto",
+                "total": "97",
+                "border": "97"
+            },
+            "width": 20
+        },
+        "fraction": {
+            "ndigits": 2
+        },
+        "noBuffer": false,
+        "key": {
+            "type": "both",
+            "paddingLeft": 2
+        },
+        "freq": {
+            "ndigits": 2,
+            "spaceBeforeUnit": "default"
+        },
+        "constants": [
+            "─────────────────"
+        ]
+    },
+    "general": {
+        "thread": true,
+        "processingTimeout": 5000,
+        "detectVersion": true,
+        "playerName": "",
+        "dsForceDrm": false
+    },
+    "modules": [
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        {
+            "type": "custom", // HardwareStart
+            // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+            "format": "┌{$1} {#1}Software information{#2} {$1}┐",
+            "outputColor": "magenta"
+        },
+        {
+            "type": "os",
+            "keyIcon": ""
+        },
+        {
+            "type": "kernel",
+            "keyIcon": ""
+        },
+        {
+            "type": "shell",
+            "keyIcon": ""
+        },
+        {
+            "type": "packages",
+            "keyIcon": "󰏖",
+            "disabled": [
+                "apk"
+            ],
+            "combined": false
+        },
+        {
+            "type": "custom",
+            "format": "├{$1} {#1}Hardware Information{#2} {$1}┤",
+            "outputColor": "magenta"
+        },
+        {
+            "type": "memory",
+            "keyIcon": "",
+            "percent": {
+                "green": 50,
+                "yellow": 80,
+                "type": 0
+            }
+        },
+        {
+            "type": "swap",
+            "percent": {
+                "green": 50,
+                "yellow": 80,
+                "type": 0
+            },
+            "keyIcon": "󰓡",
+            "separate": false
+        },
+        {
+            "type": "disk",
+            "key": "{name}",
+            "keyIcon": "",
+            "showRegular": true,
+            "showExternal": true,
+            "showHidden": false,
+            "showSubvolumes": false,
+            "showReadOnly": true,
+            "showUnknown": false,
+            "folders": "",
+            "hideFolders": "/efi:/boot:/boot/efi:/boot/firmware",
+            "hideFS": "",
+            "useAvailable": false,
+            "percent": {
+                "green": 50,
+                "yellow": 80,
+                "type": 0
+            },
+            "format": "{size-used} / {size-total} ({size-percentage})"
+        },
+        {
+            "type": "display",
+            "keyIcon": "󰍹",
+            "compactType": "none",
+            "preciseRefreshRate": false,
+            "format": "{width}x{height} {inch}\", {refresh-rate} Hz"
+        },
+        {
+            "type": "host",
+            "keyIcon": "󰌢",
+            "format": "{name}"
+        },
+        {
+            "type": "cpu",
+            "keyIcon": "",
+            "temp": true,
+            "showPeCoreCount": false,
+            "format": "{name} ({temperature})"
+        },
+        {
+            "type": "gpu",
+            "keyIcon": "󰾲",
+            "key": "GPU #{index}",
+            "driverSpecific": false,
+            "detectionMethod": "pci",
+            "temp": true,
+            "hideType": "none",
+            "percent": {
+                "green": 50,
+                "yellow": 80,
+                "type": 0
+            },
+            "format": "{name} ({temperature})"
+        },
+        {
+            "type": "battery",
+            "keyIcon": "",
+            "temp": false,
+            "percent": {
+                "green": 50,
+                "yellow": 20,
+                "type": 0
+            }
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘",
+            "outputColor": "magenta"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        }
+    ]
+}
