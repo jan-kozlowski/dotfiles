@@ -17,6 +17,6 @@ fastfetch
 echo
 
 export PATH=$PATH:~/.local/bin
-eval "$(oh-my-posh init bash --config ~/.local/bin/theme.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/theme.omp.json)"
 
 eval "$(zoxide init bash)"
