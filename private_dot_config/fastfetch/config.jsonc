@@ -3,8 +3,8 @@
     "logo": {
         "type": "chafa",
         "source": "/home/jankozlowski/.config/fastfetch/image4.jpg",
-        "width": 65,
-        "height": 25,
+        "width": 62,
+        "height": 22,
         // "type": "file",
         // "source": "/home/jankozlowski/.config/fastfetch/ascii2.txt",
         "color": {
@@ -125,9 +125,6 @@
         "dsForceDrm": false
     },
     "modules": [
-        "break",
-        "break",
-        "break",
         "break",
         "break",
         "break",
