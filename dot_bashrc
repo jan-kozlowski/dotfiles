@@ -14,7 +14,6 @@ PS1='[\u@\h \W]\$ '
 source <(ng completion script)
 
 fastfetch
-echo
 
 export PATH=$PATH:~/.local/bin
 eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/theme.omp.json)"
