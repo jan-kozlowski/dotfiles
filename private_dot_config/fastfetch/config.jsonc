@@ -3,10 +3,10 @@
     "logo": {
         "type": "chafa",
         "source": "/home/jankozlowski/.config/fastfetch/image4.jpg",
-        "width": 62,
-        "height": 22,
+        "width": 82,
+        "height": 27,
         // "type": "file",
-        // "source": "/home/jankozlowski/.config/fastfetch/ascii2.txt",
+        // "source": "/home/jankozlowski/.config/fastfetch/ascii.txt",
         "color": {
             "1": "magenta",
             "2": "magenta",
@@ -30,9 +30,10 @@
         "chafa": {
             "fgOnly": true,
             "canvasMode": "TRUECOLOR",
-            "ditherMode": "DIFFUSION",
-            "colorSpace": "RGB",
-            "symbols": "braille"
+            "ditherMode": "NONE",
+            "colorSpace": "DIN99D",
+            "symbols": "space+braille+ascii+digit"
+            // "symbols": "border-diagonal+space+braille"
         }
     },
     "display": {
@@ -125,6 +126,11 @@
         "dsForceDrm": false
     },
     "modules": [
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
         "break",
         "break",
         "break",
