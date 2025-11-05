@@ -3,8 +3,8 @@
     "logo": {
         "type": "chafa",
         "source": "/home/jankozlowski/.config/fastfetch/image4.jpg",
-        "width": 82,
-        "height": 27,
+        "width": 102,
+        "height": 37,
         // "type": "file",
         // "source": "/home/jankozlowski/.config/fastfetch/ascii.txt",
         "color": {
@@ -136,6 +136,13 @@
         "break",
         "break",
         "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
+        "break",
         {
             "type": "custom", // HardwareStart
             // {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
@@ -159,8 +166,9 @@
             "keyIcon": "󰏖",
             "disabled": [
                 "apk"
+                // "flatpak"
             ],
-            "combined": false
+            "combined": true
         },
         {
             "type": "custom",
@@ -260,6 +268,7 @@
             "type": "colors",
             "paddingLeft": 2,
             "symbol": "circle"
-        }
+        },
+        "break"
     ]
 }
