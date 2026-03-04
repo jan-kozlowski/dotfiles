@@ -10,9 +10,6 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 fastfetch
 
 export PATH=$PATH:~/.local/bin
@@ -30,4 +27,3 @@ function y() {
 }
 
 alias yazi=y
-
