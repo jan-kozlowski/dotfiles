@@ -1,0 +1,186 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+(bold bg:blue fg:base)\
+$status\
+$cmd_duration\
+$line_break\
+$directory\
+$line_break\
+$character"""
+
+palette = "custom"
+[palettes.custom]
+base = "#11111b"
+blue = "#89b4fa"
+red = "#f38ba8"
+
+# ── OS icon ─────────────────────────────────────────────────────────────────
+[os]
+format = '[ $symbol]($style)'
+style = "bold bg:base fg:blue"
+disabled = false
+
+# ── Exit status ─────────────────────────────────────────────────────────────
+[status]
+format            = '[$symbol]($style)'
+success_symbol    = "[  ](bold bg:blue fg:base)"
+not_found_symbol  = "[  ](bold bg:red fg:base)"
+symbol            = "[  ](bold bg:red fg:base)"
+disabled          = false
+
+# ── Execution time ──────────────────────────────────────────────────────────
+[cmd_duration]
+format            = "[ $duration ]($style)[](fg:base)"
+style             = "bold bg:base fg:blue"
+min_time          = 0       # show always
+show_milliseconds = true
+
+# ── Git branch ──────────────────────────────────────────────────────────────
+[git_branch]
+format = "[](fg:base bg:blue)[ $symbol $branch(:$remote_branch) ]($style)"
+symbol = ""
+style  = "bold bg:blue fg:base"
+disabled = false
+
+
+# ── Directory (second line, agnoster-short max 3 dirs) ───────────────────────
+[directory]
+format            = "[┌─ $path ]($style)"
+style             = "bold fg:blue"
+truncate_to_repo = false
+truncation_length = 0
+
+# ── Prompt character (third line) ────────────────────────────────────────────
+[character]
+format          = "[$symbol]($style) "
+success_symbol  = "[└─ ❯](bold blue)"
+error_symbol    = "[└─ ❯](bold blue)"
+
+# SYMBOLS
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
