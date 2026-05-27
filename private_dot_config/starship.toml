@@ -1,62 +1,47 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$os\
-(bold bg:blue fg:base)\
 $status\
 $cmd_duration\
-$line_break\
 $directory\
-$line_break\
 $character"""
-
-palette = "custom"
-[palettes.custom]
-base = "#11111b"
-blue = "#89b4fa"
-red = "#f38ba8"
 
 # ── OS icon ─────────────────────────────────────────────────────────────────
 [os]
-format = '[ $symbol]($style)'
-style = "bold bg:base fg:blue"
+format = '[ $symbol ]($style)'
+style   = "bold prev_fg inverted"
 disabled = false
-
-# ── Exit status ─────────────────────────────────────────────────────────────
-[status]
-format            = '[$symbol]($style)'
-success_symbol    = "[  ](bold bg:blue fg:base)"
-not_found_symbol  = "[  ](bold bg:red fg:base)"
-symbol            = "[  ](bold bg:red fg:base)"
-disabled          = false
 
 # ── Execution time ──────────────────────────────────────────────────────────
 [cmd_duration]
-format            = "[ $duration ]($style)[](fg:base)"
-style             = "bold bg:base fg:blue"
+format            = "[ $duration ]($style)"
+style             = "bold prev_fg"
 min_time          = 0       # show always
 show_milliseconds = true
 
-# ── Git branch ──────────────────────────────────────────────────────────────
-[git_branch]
-format = "[](fg:base bg:blue)[ $symbol $branch(:$remote_branch) ]($style)"
-symbol = ""
-style  = "bold bg:blue fg:base"
-disabled = false
-
+# ── Exit status ─────────────────────────────────────────────────────────────
+[status]
+format            = '[ $symbol ]($style)'
+success_style   = "bold blue inverted"
+failure_style   = "bold red inverted"
+success_symbol    = ""
+not_found_symbol  = ""
+symbol            = ""
+disabled          = false
 
 # ── Directory (second line, agnoster-short max 3 dirs) ───────────────────────
 [directory]
-format            = "[┌─ $path ]($style)"
-style             = "bold fg:blue"
+format = '[ $path ]($style)'
+style   = "bold prev_fg inverted"
+disabled = false
 truncate_to_repo = false
 truncation_length = 0
 
 # ── Prompt character (third line) ────────────────────────────────────────────
 [character]
 format          = "[$symbol]($style) "
-success_symbol  = "[└─ ❯](bold blue)"
-error_symbol    = "[└─ ❯](bold blue)"
+success_symbol  = "[](bold prev_fg)"
+error_symbol    = "[](bold prev_fg)"
 
 # SYMBOLS
 [git_commit]
