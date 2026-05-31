@@ -11,19 +11,3 @@ PS1='[\u@\h \W]\$ '
 . "$HOME/.cargo/env"
 
 fastfetch
-
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.dotnet/tools
-eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/theme.omp.json)"
-
-eval "$(zoxide init bash)"
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && cd -- "$cwd"
-	rm -f -- "$tmp"
-}
-
-alias yazi=y
