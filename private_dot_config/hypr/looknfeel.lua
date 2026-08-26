@@ -21,6 +21,15 @@ hl.config({
         dim_inactive = false
     },
     animations = {
-      enabled = true,
+        enabled = true,
     },
 })
+
+hl.curve("rubber", { type = "spring", mass = 0.7, stiffness = 90, dampening = 12 })
+
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1, spring = "rubber" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 1, spring = "rubber" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, spring = "rubber" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 1, spring = "rubber" })
+
+hl.animation({ leaf = "border", enabled = true, speed = 4, spring = "rubber" })
