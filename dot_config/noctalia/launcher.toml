@@ -1,0 +1,55 @@
+[shell.launcher]
+categories      = false   # show launcher category filters; Tab toggles them while open
+show_icons      = true   # show application icons in launcher results
+show_app_origin_indicator = true # show package origin indicators on application results
+compact         = false  # smaller icons and tighter rows; hides subtitles
+app_grid        = false  # icon grid with labels underneath when results are apps only
+show_app_actions = true  # include searchable .desktop actions alongside applications
+sort_by_usage   = true   # boost frequently used apps and show Recently Used filter
+pinned          = []     # desktop entry IDs shown first when the launcher opens
+fetch_exchange_rates = true  # refresh currency rates from third-party online sources
+provider_prefix = "/"    # common prefix character for provider trigger words (e.g. "/" or ".")
+auto_paste      = "auto" # off | auto | ctrl_v | ctrl_shift_v | shift_insert (after copy activations)
+
+[shell.launcher.providers.calculator]
+prefix = "calc"          # trigger word for calculator expressions (e.g. "/calc")
+global = true            # also show calculator results in un-prefixed search
+
+[shell.launcher.providers.emoji]
+prefix = "emo"           # trigger word (triggers on provider_prefix + trigger, e.g. "/emo")
+
+[shell.launcher.providers.panels]
+prefix = "pan"           # trigger word for panel search (e.g. "/pan")
+
+[shell.launcher.panels]
+ignored = ["polkit", "setup-wizard", "test", "launcher"]
+
+[shell.launcher.providers.session]
+prefix = "session"       # trigger word for session actions (e.g. "/session")
+global = false           # set true to also include session actions in un-prefixed search
+
+[shell.launcher.providers.wallpaper]
+prefix = "wall"          # trigger word for wallpaper selector (e.g. "/wall")
+
+[shell.launcher.providers.windows]
+prefix = "win"           # trigger word for windows (e.g. "/win")
+
+# Dmenu-style providers: a command emits newline-separated candidates that show up
+# in the launcher. A tab in a line splits it into title \t description. On activate,
+# `exec` runs with {selection} substituted; without `exec` the line is copied instead.
+[shell.launcher.dmenu.entry.ssh]
+command = "awk '/^Host /{print $2}' ~/.ssh/config"  # one candidate per stdout line
+exec    = "foot ssh {selection}"   # {selection} = the chosen line; run detached
+prefix  = "ssh"                    # trigger word (composed with provider_prefix -> "/ssh"); empty = global only
+glyph   = "server"                 # optional Tabler glyph shared by every result
+global  = false                    # true = also surface in unprefixed search
+
+# Plugin launcher providers default to the prefix/global set in their manifest.
+# Override either from config, keyed by the plugin's fully-qualified "<pluginId>:<entry>".
+[shell.launcher.providers."author/my-plugin:search"]
+prefix = "mp"            # overrides the manifest prefix (triggers on "/mp")
+global = true            # overrides the manifest include_in_global_search
+
+[shell.screen_corners]
+enabled = false    # overlay black rounded corners on each screen
+size    = 32       # corner radius in logical pixels (1–100)

@@ -1,0 +1,39 @@
+{
+  "format_on_save": "off",
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "cli_default_open_behavior": "existing_window",
+  "search": { "button": false },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 20.0,
+  "buffer_font_size": 20.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Noctalia Dark",
+  },
+  "diagnostics": { "button": true },
+  "terminal": { "button": false },
+  "status_bar": {
+    "show_active_file": false,
+    "line_endings_button": false,
+    "cursor_position_button": true,
+    "active_language_button": true,
+  },
+  "title_bar": {
+    "show_sign_in": true,
+  },
+  "current_line_highlight": "all",
+  "unnecessary_code_fade": 0.6,
+  "cursor_shape": "bar",
+  "project_panel": { "button": true, "dock": "left" },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": { "check": { "command": "clippy" } },
+    },
+  },
+  // "experimental.theme_overrides": {
+  //   "title_bar.inactive_background": "#000000"
+  // }
+}

@@ -1,0 +1,8 @@
+[control_center]
+width = 1200
+
+[location]
+auto_locate = true
+
+[plugins]
+enabled = ["noctalia/wallpaper_depth:manager"]

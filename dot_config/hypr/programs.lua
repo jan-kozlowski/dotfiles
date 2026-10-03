@@ -1,0 +1,5 @@
+terminal    = "kitty"
+fileManager = "yazi"
+menu        = "hyprlauncher"
+browser     = "zen-browser"
+editor      = "zeditor"

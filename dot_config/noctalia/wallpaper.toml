@@ -1,0 +1,15 @@
+[wallpaper]
+enabled             = true
+fill_mode           = "crop"    # center | crop | fit | stretch | repeat | span
+transition          = ["fade", "wipe", "disc", "stripes", "zoom", "honeycomb"]
+transition_duration = 1500
+edge_smoothness     = 0.3
+transition_on_startup = false
+directory           = "/home/jankozlowski/Pictures/wallpapers"
+per_monitor_directories = false
+
+[wallpaper.automation]
+enabled                      = true
+interval_seconds             = 28800    # 8 hours
+order                        = "alphabetical" # random | alphabetical
+recursive                    = false
