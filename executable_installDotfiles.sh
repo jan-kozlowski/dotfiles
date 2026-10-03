@@ -13,3 +13,5 @@ yay -S zen-browser-bin
 mkdir ~/Documents
 mkdir ~/Downloads
 mkdir ~/Pictures
+
+chezmoi init --apply https://github.com/$GITHUB_USERNAME/dotfiles.git
