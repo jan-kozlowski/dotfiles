@@ -15,6 +15,3 @@ eval "$(zeditor --completions bash)"
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias cd='z'
-
-export EDITOR="zeditor --wait"
-export VISUAL="zeditor --wait"
