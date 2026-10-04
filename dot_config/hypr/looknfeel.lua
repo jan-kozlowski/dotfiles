@@ -1,9 +1,3 @@
-hl.workspace_rule({ workspace = "1", monitor = "DP-1", persistent = false, default_name = "web" })
-hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = false, default_name = "code" })
-hl.workspace_rule({ workspace = "3", monitor = "DP-1", persistent = false, default_name = "chat" })
-hl.workspace_rule({ workspace = "4", monitor = "DP-1", persistent = false, default_name = "game" })
-hl.workspace_rule({ workspace = "5", monitor = "DP-1", persistent = false, default_name = "design" })
-
 hl.layer_rule({
     name = "noctalia",
     match = {

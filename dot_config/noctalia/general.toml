@@ -6,3 +6,6 @@ auto_locate = true
 
 [plugins]
 enabled = ["noctalia/wallpaper_depth:manager"]
+
+[shell]
+font_family = "JetBrainsMono Nerd Font"

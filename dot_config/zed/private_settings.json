@@ -1,4 +1,6 @@
 {
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "format_on_save": "off",
   "edit_predictions": {
     "mode": "subtle",
@@ -14,7 +16,8 @@
     "dark": "Noctalia Dark",
   },
   "diagnostics": { "button": true },
-  "terminal": { "button": false },
+  "terminal": { "font_family": ".ZedMono",
+                "button": false },
   "status_bar": {
     "show_active_file": false,
     "line_endings_button": false,
