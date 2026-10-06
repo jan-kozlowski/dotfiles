@@ -1,5 +1,5 @@
 terminal    = "kitty"
-fileManager = "yazi"
+fileManager = "hyprfm"
 menu        = "hyprlauncher"
-browser     = "zen-browser"
+browser     = "zen-beta"
 editor      = "zeditor"

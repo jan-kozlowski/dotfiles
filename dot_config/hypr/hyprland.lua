@@ -1,17 +1,9 @@
-------------------
----- MONITORS ----
-------------------
-require("monitors")
-
----------------------
----- MY PROGRAMS ----
----------------------
 require("programs")
-
--------------------
----- AUTOSTART ----
--------------------
+require("monitors")
 require("autostart")
+require("looknfeel")
+require("input")
+require("keybindings")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -20,42 +12,10 @@ hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
------------------------
----- LOOK AND FEEL ----
------------------------
-require("looknfeel")
-
----------------
----- INPUT ----
----------------
-hl.config({
-    input = {
-        kb_layout  = "pl",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-
-        follow_mouse = 1,
-
-        sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
-
-        touchpad = {
-            natural_scroll = false,
-        },
-    },
-})
-
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
-require("keybindings")
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
@@ -90,9 +50,6 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
-
--- hyprmon: managed monitor profile include
-require("hyprmon")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()

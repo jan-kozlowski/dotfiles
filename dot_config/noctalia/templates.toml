@@ -1,3 +1,7 @@
 [theme.templates.user.obsidian_extra]
-input_path = "/home/$USER/.config/noctalia/Obsidian/obsidian.css"
-output_path = "/home/$USER/Documents/obsidian-notes/.obsidian/snippets/noctalia.css"
+input_path = "~/.config/noctalia/templates/obsidian.css"
+output_path = "~/Documents/obsidian-notes/.obsidian/snippets/noctalia.css"
+
+[theme.templates.user.hyprfm]
+input_path  = "~/.config/noctalia/templates/hyprfm.toml"
+output_path = "~/.config/hyprfm/themes/noctalia.toml"
