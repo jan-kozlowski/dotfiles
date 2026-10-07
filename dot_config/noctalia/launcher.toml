@@ -53,3 +53,27 @@ global = true            # overrides the manifest include_in_global_search
 [shell.screen_corners]
 enabled = false    # overlay black rounded corners on each screen
 size    = 32       # corner radius in logical pixels (1–100)
+
+[shell.session]
+grid = false
+
+[[shell.session.actions]]
+action = "shutdown"
+variant = "destructive"
+countdown_seconds = 3
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 3
+
+[[shell.session.actions]]
+action = "command"
+label = "Reboot to BIOS"
+glyph = "cpu"
+command = "systemctl reboot --firmware-setup"
+
+[[shell.session.actions]]
+action = "lock"
+
+[[shell.session.actions]]
+action = "logout"

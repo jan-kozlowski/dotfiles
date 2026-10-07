@@ -5,5 +5,6 @@ hl.monitor({
     scale    = "auto",
 })
 
-hl.monitor({ output = "DP-5", mode = "2560x1440@164.96Hz", position="1920x-937"})
-hl.monitor({ output = "HDMI-A-1", mode = "1920x1080@74.97Hz"})
+hl.monitor({ output = "desc:LG Electronics LG ULTRAGEAR 311NTBKA0493", mode = "2560x1440@164.96Hz", position =
+"1920x-937" })
+hl.monitor({ output = "desc:Iiyama North America PL2530H 1154390504261", mode = "1920x1080@74.97Hz" })

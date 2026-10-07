@@ -34,9 +34,9 @@ hl.config({
             vibrancy = 0.1696,
         },
 
-        active_opacity = 0.98,
+        active_opacity   = 0.98,
         inactive_opacity = 0.97,
-        dim_inactive = false
+        dim_inactive     = false
     },
 
     dwindle = {
@@ -66,20 +66,14 @@ hl.curve("rubber", { type = "spring", mass = 0.7, stiffness = 90, dampening = 12
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 4, spring = "rubber" })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "rubber" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 1, spring = "rubber" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, spring = "rubber" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 1, spring = "rubber" })
+hl.animation({ leaf = "windows", enabled = true, speed = 3, spring="rubber", style="gnomed"})
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 2.5, spring = "rubber" })
 
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
+hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "easeInOutCubic" })
+hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint", style = "fade" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
 
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1, spring = "rubber" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, spring="rubber", style="slidefade" })
 
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
